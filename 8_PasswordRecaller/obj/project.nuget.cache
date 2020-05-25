@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KrMh6LdzW8e0i+maymSS5BHket5BbvmMK5GgcYLAfIuu0zZpeZn/XVZUxttxgfHTLsSIChlBCx6o/zA+4IwZTA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\8_PasswordRecaller\\8_PasswordRecaller\\8_PasswordRecaller.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
