@@ -42,10 +42,6 @@ namespace _8_PasswordRecaller
             passwords.Add(info);
 
             File.WriteAllText(path, JsonConvert.SerializeObject(passwords));
-
-
-            //passwords.Add();
-            //passwords.ForEach(x => x.Description = "123");
         }
 
         public void SaveToFile(List<PassInfo> info) => 
@@ -128,9 +124,6 @@ namespace _8_PasswordRecaller
 
         public void DeletePassInfo(List<PassInfo> oldPasswords, int index)
         {
-            //List<PassInfo> oldPasswords = LoadFromFile();
-            //int index = ChoosePassInfo(oldPasswords);
-
             oldPasswords.Remove(oldPasswords[index - 1]);
             SaveToFile(oldPasswords);
         }
