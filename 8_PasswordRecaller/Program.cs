@@ -7,9 +7,9 @@ namespace _8_PasswordRecaller
         static void Main(string[] args)
         {
 
-            //new Helper().SaveToFile(new Helper().GetPassInfo());
+            var menu = new Menu();
 
-            new Menu().Greeting();
+            menu.Greeting();
 
         }
     }

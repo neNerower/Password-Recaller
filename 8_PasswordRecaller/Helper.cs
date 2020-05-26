@@ -48,6 +48,9 @@ namespace _8_PasswordRecaller
             //passwords.ForEach(x => x.Description = "123");
         }
 
+        public void SaveToFile(List<PassInfo> info) => 
+            File.WriteAllText(path, JsonConvert.SerializeObject(info));
+
         public List<PassInfo> LoadFromFile()
         {
             var oldPasswords = new List<PassInfo>();
@@ -79,7 +82,7 @@ namespace _8_PasswordRecaller
 
             Console.WriteLine("\nLet's find your password from the list");
             Console.WriteLine("There are all of your psswords");
-            Console.WriteLine("Choose the password you want to recall");
+            Console.WriteLine("Choose the password you need");
 
             oldPasswords.ForEach(x =>
             {
@@ -123,7 +126,21 @@ namespace _8_PasswordRecaller
         }
 
 
+        public void DeletePassInfo(List<PassInfo> oldPasswords, int index)
+        {
+            //List<PassInfo> oldPasswords = LoadFromFile();
+            //int index = ChoosePassInfo(oldPasswords);
+
+            oldPasswords.Remove(oldPasswords[index - 1]);
+            SaveToFile(oldPasswords);
+        }
 
 
+        public void AddToFile()
+        {
+            Console.WriteLine("\nLet's add new password to the list");
+
+            SaveToFile(GetPassInfo());
+        }
     }
 }
